@@ -52,20 +52,20 @@
     addShapeMeasurements("AREA")
     resetSelection()
 
-    fitc_detections = getDetectionObjects().findAll { it.getPathClass() == getPathClass("fitc_foci")}
+    fitc_detections = fitc_annotation.getChildObjects().findAll { it.getPathClass() == getPathClass("fitc_foci")}
     print("fitc: " + fitc_detections.size() )
     def delete_fitc = fitc_detections.findAll{ measurement(it, "Area µm^2") > 0.7 }
     print("delete fitc: " + delete_fitc.size() )
     removeObjects(delete_fitc, true)
-    fitc_detections = getDetectionObjects().findAll { it.getPathClass() == getPathClass("fitc_foci")}
+    fitc_detections = fitc_annotation.getChildObjects().findAll { it.getPathClass() == getPathClass("fitc_foci")}
     print("fitc: " + fitc_detections.size() )
     
-    cy5_detections = getDetectionObjects().findAll { it.getPathClass() == getPathClass("cy5_foci")}
+    cy5_detections = cy5_annotation.getChildObjects().findAll { it.getPathClass() == getPathClass("cy5_foci")}
     print("cy5: " + cy5_detections.size() )
     def delete_cy5 = cy5_detections.findAll{  measurement(it, "Area µm^2") > 0.7 }
     print("delete cy5: " + delete_cy5.size() )
     removeObjects(delete_cy5, true)
-    cy5_detections = getDetectionObjects().findAll { it.getPathClass() == getPathClass("cy5_foci")}
+    cy5_detections = cy5_annotation.getChildObjects().findAll { it.getPathClass() == getPathClass("cy5_foci")}
     print("cy5: " + fitc_detections.size() )
     
 // Calculate distances
