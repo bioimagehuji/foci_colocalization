@@ -25,10 +25,10 @@
     "outputChannels": [],
     "classificationLabels": {
       "0": {
-        "name": "cy5_foci",
+        "name": "brdu_foci",
         "color": [
           255,
-          0,
+          255,
           255
         ]
       },
@@ -39,7 +39,7 @@
     "type": "data.op.channels",
     "colorTransforms": [
       {
-        "channelName": "LED-Cy5_Q"
+        "channelName": "LED-Tritc_Q (C3)"
       }
     ],
     "op": {

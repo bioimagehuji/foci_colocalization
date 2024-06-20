@@ -1,0 +1,17 @@
+{
+  "object_classifier_type": "SimpleClassifier",
+  "function": {
+    "classifier_fun": "ClassifyByMeasurementFunction",
+    "measurement": "Nucleus: LED-DAPI_Q std dev",
+    "pathClassBelow": "interphase",
+    "pathClassEquals": "pro/meta-phase",
+    "pathClassAbove": "pro/meta-phase",
+    "threshold": 13.0
+  },
+  "pathClasses": [
+    "interphase",
+    "pro/meta-phase"
+  ],
+  "filter": "CELLS",
+  "timestamp": 1718035075428
+}
